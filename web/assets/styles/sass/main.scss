@@ -1,0 +1,15 @@
+html, body {
+  font-family: "Open Sans", "Trebuchet MS", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+div {
+  &.header {
+    width: 100%;
+  }
+  &.main {
+    width: 100%;
+  }
+  &.footer {
+    width: 100%;
+  }
+}

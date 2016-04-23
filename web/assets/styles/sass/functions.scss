@@ -1,0 +1,33 @@
+@import "variables";
+
+@mixin default_container {
+  max-width: $main_width;
+  margin: 0 auto;
+  min-height: 200px;
+  padding: $generic_padding;
+}
+
+@mixin wide_container {
+  width: 100%;
+  min-height: 200px;
+}
+
+@mixin wide_wrapper {
+  max-width: $main_width;
+  margin: 0 auto;
+}
+
+@mixin header_container {
+  width: 100%;
+  margin: 0 auto;
+  height: $header_height;
+  line-height: $header_height;
+  font-size: 24px;
+}
+
+@mixin transition-mixin-time($property, $time) {
+  -webkit-transition: $property $time ease-in-out;
+  -moz-transition: $property $time ease-in-out;
+  -o-transition: $property $time ease-in-out;
+  transition: $property $time ease-in-out;
+}

@@ -1,15 +1,43 @@
+@import "variables";
+@import "functions";
+@import "responsive";
+
 html, body {
   font-family: "Open Sans", "Trebuchet MS", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-div {
-  &.header {
-    width: 100%;
+a {
+  color: $blue;
+  text-decoration: none;
+  @include transition-mixin-time(color, 0.3s);
+  &:hover, &:active {
+    color: $blue_dark;
   }
-  &.main {
-    width: 100%;
+}
+
+body.body-wrapper {
+  footer {
+    @include wide_container;
+    .wrapper {
+      @include wide_wrapper;
+    }
   }
-  &.footer {
-    width: 100%;
+  header {
+    @include header_container;
+    background-color: $blue;
+    color: white;
+    .wrapper {
+      @include wide_wrapper;
+    }
   }
+  footer {
+    background-color: $grey;
+    color: $grey_dark;
+  }
+  .main {
+    @include default_container;
+  }
+
 }

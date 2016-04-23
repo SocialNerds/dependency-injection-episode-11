@@ -1,3 +1,15 @@
 {% extends 'ThemeBundle:Default:theme.html.twig' %}
 
-{% block main %}Hello {{ name }}, the time is {{ time|date }}! {% endblock %}
+{% block header %}
+    {{ header }}
+{% endblock %}
+
+{% block main %}
+    <h1>{{ main }}</h1>
+    <div>
+        <a href="#">This is a link</a>
+        {{ text }}
+    </div>
+{% endblock %}
+
+{% block footer %}{{ footer }}{% endblock %}

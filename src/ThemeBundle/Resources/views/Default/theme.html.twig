@@ -7,7 +7,9 @@
 {% block body %}
 
     <header class="header">
-        {% block header %} {% endblock %}
+        <div class="wrapper">
+            {% block header %} {% endblock %}
+        </div>
     </header>
 
     <div class="main">
@@ -15,7 +17,9 @@
     </div>
 
     <footer class="footer">
-        {% block footer %} {% endblock %}
+        <div class="wrapper">
+            {% block footer %} {% endblock %}
+        </div>
     </footer>
 
 {% endblock %}

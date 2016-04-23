@@ -1,3 +1,8 @@
+theme:
+    resource: "@ThemeBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 first:
     resource: "@FirstBundle/Controller/"
     type:     annotation

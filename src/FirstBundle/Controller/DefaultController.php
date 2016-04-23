@@ -12,7 +12,6 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-
         $data = array(
           'name' => 'SocialNerds',
           'time' => time(),

@@ -7,6 +7,7 @@ use AppBundle\SocialResponse;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
@@ -24,7 +25,7 @@ class DefaultController extends Controller
 
         $container
             ->register('get_response', 'AppBundle\GetResponse')
-            ->addArgument($container->get('social_response'));
+            ->addArgument(new Reference('social_response'));
 
         $response = $container->get('get_response')->get();
 

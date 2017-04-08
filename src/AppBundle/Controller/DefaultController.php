@@ -18,11 +18,13 @@ class DefaultController extends Controller
     {
         $container = new ContainerBuilder();
 
-        $socialResponse = new SocialResponse('Hello socially!');
-        $container->set('social_response', $socialResponse);
+        $container
+            ->register('social_response', 'AppBundle\SocialResponse')
+            ->addArgument('Hello socially!');
 
-        $sendResponse = new GetResponse($container->get('social_response'));
-        $container->set('get_response', $sendResponse);
+        $container
+            ->register('get_response', 'AppBundle\GetResponse')
+            ->addArgument($container->get('social_response'));
 
         $response = $container->get('get_response')->get();
 

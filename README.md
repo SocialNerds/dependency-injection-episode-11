@@ -1,4 +1,4 @@
-symfony2
-========
+dic
+===
 
-A Symfony project created on April 21, 2016, 10:13 pm.
+A Symfony project created on April 7, 2017, 12:59 pm.

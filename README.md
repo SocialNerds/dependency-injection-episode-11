@@ -1,4 +1,8 @@
-dic
+Dependency Injection - Episode 11
 ===
 
-A Symfony project created on April 7, 2017, 12:59 pm.
+An example about dependency injection using Symfony Dependency Injection Component.
+
+The example is broken in 5 steps.
+
+Check https://youtu.be/qL3hge1ldts

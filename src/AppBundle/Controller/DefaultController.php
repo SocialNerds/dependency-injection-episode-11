@@ -16,10 +16,12 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $socialResponse = new SocialResponse('Hello socially!');
-
-        $sendResponse = new GetResponse($socialResponse);
         $container = new ContainerBuilder();
+
+        $socialResponse = new SocialResponse('Hello socially!');
+        $container->set('social_response', $socialResponse);
+
+        $sendResponse = new GetResponse($container->get('social_response'));
         $container->set('get_response', $sendResponse);
 
         $response = $container->get('get_response')->get();

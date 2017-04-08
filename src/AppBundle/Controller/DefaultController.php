@@ -3,6 +3,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\GetResponse;
+use AppBundle\SocialResponse;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -15,7 +16,9 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $sendResponse = new GetResponse('Hello!');
+        $socialResponse = new SocialResponse('Hello socially!');
+
+        $sendResponse = new GetResponse($socialResponse);
         $container = new ContainerBuilder();
         $container->set('get_response', $sendResponse);
 

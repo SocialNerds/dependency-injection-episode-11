@@ -6,8 +6,8 @@ class GetResponse {
 
   private $message;
 
-  function __construct(string $message) {
-    $this->message = $message;
+  function __construct(SocialResponse $socialResponse) {
+    $this->message = $socialResponse->message;
   }
 
   public function get() {
